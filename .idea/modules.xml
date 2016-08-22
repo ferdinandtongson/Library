@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Library.iml" filepath="$PROJECT_DIR$/Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_joke_telling/joketellinglib.iml" filepath="$PROJECT_DIR$/lib_joke_telling/joketellinglib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_joke_telling/lib_joke_telling.iml" filepath="$PROJECT_DIR$/lib_joke_telling/lib_joke_telling.iml" />
     </modules>
   </component>
 </project>
