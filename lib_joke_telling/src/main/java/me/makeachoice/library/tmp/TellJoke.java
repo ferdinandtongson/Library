@@ -16,7 +16,7 @@ public class TellJoke {
 /**************************************************************************************************/
 
     //mJokes - an array of jokes
-    private String[][] mJokes;
+    private String[] mJokes;
 
     //mSequence - order sequence of jokes
     private int[] mSequence;
@@ -89,65 +89,65 @@ public class TellJoke {
  * void initializeJokes() - initializes array of Jokes. A joke is a two string array of strings,
  *      Setup and Punchline.
  */
-    private String[][] initializeJokes(){
-        String[] joke01 = {"What is a programmer?",
-        "A machine that turns coffee into code."};
+    private String[] initializeJokes(){
+        String joke01 = "What is a programmer?" +
+        "/n/nA machine that turns coffee into code.";
 
-        String[] joke02 = {"What is a programmer?",
-        "A person who fixed a problem that you don't know you have, in a way you don't understand"};
+        String joke02 = "What is a programmer?" +
+        "/n/nA person who fixed a problem that you don't know you have, in a way you don't understand";
 
-        String[] joke03 = {"What is an algorithm?",
-        "Word used by programmers when....they do not want to explain what they did."};
+        String joke03 = "What is an algorithm?" +
+        "/n/nWord used by programmers when....they do not want to explain what they did.";
 
-        String[] joke04 = {"What is hardware?",
-        "The part of the computer that you can kick."};
+        String joke04 = "What is hardware?" +
+        "/n/nThe part of the computer that you can kick.";
 
-        String[] joke05 = {"What is the object-oreinted way to become wealthy?",
-        "Inheritance"};
+        String joke05 = "What is the object-oreinted way to become wealthy?" +
+        "/n/nInheritance";
 
-        String[] joke06 = {"What do you call a programmer from Finland?",
-        "Nerdic"};
+        String joke06 = "What do you call a programmer from Finland?" +
+        "/n/nNerdic";
 
-        String[] joke07 = {"Where is a programmers' favorite hangout place?",
-        "Foo Bar"};
+        String joke07 = "Where is a programmers' favorite hangout place?" +
+        "/n/nFoo Bar";
 
-        String[] joke08 = {"Why did the programmer quit his job?",
-        "Because he didn't get arrays"};
+        String joke08 = "Why did the programmer quit his job?" +
+        "/n/nBecause he didn't get arrays";
 
-        String[] joke09 = {"'0' is false and '1' is true, right?",
-        "1"};
+        String joke09 = "'0' is false and '1' is true, right?" +
+        "1";
 
-        String[] joke10 = {"How do you tell an introverted computer scientist from an extroverted computer scientist?",
-        "An extroverted computer scientist looks at your shoes when he talks to you."};
+        String joke10 = "How do you tell an introverted computer scientist from an extroverted computer scientist?" +
+        "/n/nAn extroverted computer scientist looks at your shoes when he talks to you.";
 
-        String[] joke11 = {"What do computers and air conditioners have in common?",
-        "They both become useless when you open windows."};
+        String joke11 = "What do computers and air conditioners have in common?" +
+        "/n/nThey both become useless when you open windows.";
 
-        String[] joke12 = {"Why do Java programmers have to wear glasses?",
-        "Because they don't C#"};
+        String joke12 = "Why do Java programmers have to wear glasses?" +
+        "/n/nBecause they don't C#";
 
-        String[] joke13 = {"Why do programmers always mix up Halloween and Christmas?",
-        "Because Oct 31 == Dec 25"};
+        String joke13 = "Why do programmers always mix up Halloween and Christmas?" +
+        "/n/nBecause Oct 31 == Dec 25";
 
-        String [] joke14 = {"How many programmers does it take to change a light bulb?",
-        "None, that's a hardware problem"};
+        String joke14 = "How many programmers does it take to change a light bulb?" +
+        "/n/nNone, that's a hardware problem";
 
-        String[] joke15 = {"Why programmers like UNIX:",
-        "who && gawk && uname && talk && date && wine && touch && unzip && strip && touch && finger && mount && fsck && more && yes; yes; more; yes; umount && make clean && sleep"};
+        String joke15 = "Why programmers like UNIX:" +
+        "/n/nwho && gawk && uname && talk && date && wine && touch && unzip && strip && touch && finger && mount && fsck && more && yes; yes; more; yes; umount && make clean && sleep";
 
-        String[] joke16 = {"Command line Russian roulette:",
-        "[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / || echo *Click*"};
+        String joke16 = "Command line Russian roulette:" +
+        "/n/n[ $[ $RANDOM % 6 ] == 0 ] && rm -rf / || echo *Click*";
 
-        String[] joke17 = {"Don't anthropomorphize computers.",
-        "They hate that!"};
+        String joke17 = "Don't anthropomorphize computers." +
+        "/n/nThey hate that!";
 
-        String[] joke18 = {"ASCII stupid question: ",
-        "Get a stupid ANSI"};
+        String joke18 = "ASCII stupid question: " +
+        "/n/nGet a stupid ANSI";
 
-        String[] joke19 = {"Two bytes meet. The first byte ask, 'Are you ill?'",
-        "The second byte replies, 'No, just feeling a bit off'"};
+        String joke19 = "Two bytes meet. The first byte ask, 'Are you ill?'" +
+        "/n/nThe second byte replies, 'No, just feeling a bit off'";
 
-        return new String[][]{joke01, joke02, joke03, joke04, joke05,
+        return new String[]{joke01, joke02, joke03, joke04, joke05,
                 joke06, joke07, joke08, joke09, joke10,
                 joke11, joke12, joke13, joke14, joke15,
                 joke16, joke17, joke18, joke19};
@@ -168,21 +168,21 @@ public class TellJoke {
 /*
  * String[][] getJokes() - get ordered array of jokes
  */
-    public String[][] getJokes(){
+    public String[] getJokes(){
         return mJokes;
     }
 
 /*
  * String[][] getRandomizedJokes() - get randomized array of jokes
  */
-    public String[][] getRandomizedJokes(){
+    public String[] getRandomizedJokes(){
         return randomizeJokes();
     }
 
 /*
  * String[] getNextJoke() - get the next joke from the joke array
  */
-    public String[] getNextJoke(){
+    public String getNextJoke(){
         //get joke from buffer
         return mJokes[nextJokeIndex()];
     }
@@ -190,7 +190,7 @@ public class TellJoke {
 /*
  * String[] getPreviousJoke - get the previous joke from the joke array
  */
-    public String[] getPreviousJoke(){
+    public String getPreviousJoke(){
         if(mIndex != 0){
             return mJokes[mIndex-1];
         }
@@ -212,10 +212,10 @@ public class TellJoke {
 /*
  * String[][] randomizeJokes() - create a randomized order of jokes from the joke array
  */
-    private String[][] randomizeJokes(){
+    private String[] randomizeJokes(){
         int count = mJokes.length;
 
-        String[][] jokes = new String[count][];
+        String[] jokes = new String[count];
 
         for(int i = 0; i < count; i++){
             int randomIndex = mSequence[i];
